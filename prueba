@@ -1,0 +1,20 @@
+Hola esta es la primera prueba.
+
+Directorio de trabajo > Staging > Repo local
+- - - - - - - - - - - - - - - - > Repo remoto
+
+git add file    - - se rastrea el archivo un archivo untracked no será trackeado
+
+git clone url   - - clona totalmente el repositorio remoto con el local.
+
+git commit      - - aplica los cambios de staging a la rama master.
+
+git push        - - enviar los cambios al repositorio remoto.
+
+git fetch       - - actualizar los cambios del remoto al local sin modificar los archivos.
+
+git merge       - - aplicar cambios del rempoto al repositorio local.
+
+git pull        - - fusiona conceptos de git merge y fetch.
+
+
