@@ -5,6 +5,7 @@ So, enjoy seeing a few of spanish notes bout git.
 They are crearly in spanish maybe i'll translate it later.
 
 this is me again trying to check what merge and fetch do.
+one dot.
 
 @tsuloid on telegram btw.
 
