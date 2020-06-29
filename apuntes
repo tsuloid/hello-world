@@ -3,18 +3,73 @@
 Directorio de trabajo > Staging > Repo local
 - - - - - - - - - - - - - - - - > Repo remoto
 
-git add file    - - se rastrea el archivo un archivo untracked no será trackeado
+Git es un sistema de control de versiones. 
+Funciona para poder  mantener un orden en cada cambio que se realice en un proyecto.
+Siempre funciona mejor con texto plano.
 
-git clone url   - - clona totalmente el repositorio remoto con el local.
+Es importante tener en cuenta que ningún cambio de git se pierde, siempre están en un commit o versión anterior y son identificable con puntuales mensajes que se dejan a la hora de aplicarlos.
+
+Head: Es la forma en que git nos indica en cual version estamos ubicados.
+
+git show	- - muestra dónde estamos ubicados
+
+git init	- - crea una rama y un repositorio en un directorio de trabajo
+
+git status	- - muestra el estado del repositorio como en qué rama estás, si hay o no cambios realizador, si hay algun commit por hacer.
+
+git add <file>    - - Empieza a rastrear un archivo.
+
+git clone <url>   - - clona totalmente el repositorio remoto con el local.
 
 git commit      - - aplica los cambios de staging a la rama master.
 
-git push        - - enviar los cambios al repositorio remoto.
+
+El area de Staging es un lugar en memoria RAM donde se cambia un archivo para trabajar con él.
+
+Un archivo puede tener dos estados:
+
+Tracked: cuando un archivo está siendo tracked o rastreado significa que git está atento de todos los cambios que se realicen en él. 
+
+Untracked: Cuando un archivo está untracket o sin rastreas, git no va a saber qué cambios se realicen antes del commit.
+
+Un archivo recién creado, como buena práctica debe ser añadido con git add para que de esta forma git esté al tanto de todos los cambios que se realicen.
+
+
+Las branch o ramas son sólo maneras de identificar los cambios y en qué se está trabajando, por defecto la primera rama es master esta rama es donde se realizan todos los cambios, sin embbargo pueden realizarse más cambios en una misma versión sin afectar la rama master creando otra rama en paralelo, de esta forma serán 2 o más espacios de trabajo.
+
+Para unir 2 ramas se utiliza el comando git merge y se crea un commit fusionando una rama con la rama en la que se está trabajando. Ex: si estoy en rama master y uso git merge voy a traer otra rama a la rama master.
+
+git checkout	- - sirve para cambiar de rama. Si se cambia de rama sin guardar cambios se pierde el progreso.
+
+git branch	- - crea una nueva rama
+
+git merge       - - Fusiona dos ramas distintas generando un commit.
+
+
+
+Cuando se unen dos ramas y se crea un conflicto lo que sucede es lo siguiente: 
+Git no puede terminar el commit por lo que se crea un area distinta, así que se debe corregir manualmente(Si tienes un IDE este se encarga de darte opciones y hacerloautomaticamente).
+Simplemente git nos muestra en qué lineas existe el conflicto de una manera similar a esta:
+
+>>>>>>> HEAD
+	<p>Hola qué tal</p>
+===============================
+	<p>Hola cómo estás</p>
+<<<<<<< header
+
+Esta es la forma en que git nos indica en qué líneas existe el conflicto y nos pone a escoger qué lineas quiero dejar.
+Y una vez que el conflicto se haya resuelto, se puede finalizar el commit de forma exitosa. 
+
+
+Cuando quiero subir mi repositorio local a un repositorio remoto se utiliza el siguiente comando:
+
+git remote add origin <url>
+
+git push        - - envia cambios de un repositorio local a el repositorio remoto.
 
 git fetch       - - actualizar los cambios del remoto al local sin modificar los archivos.
 
-git merge       - - aplicar cambios del rempoto al repositorio local.
+git pull        - - fusiona una rama de un repositorio remoto con una rama de un repositorio local
 
-git pull        - - fusiona conceptos de git merge y fetch.
 
 
