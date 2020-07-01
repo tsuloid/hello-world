@@ -49,3 +49,37 @@ Recuerda no compartir tu llave privada.
 
 
 
+Luego símplemente añades tu llave pública a tu configuración de github y clonas/actualizas los repositorios en los que está trabajando.
+
+para clonar este repositorio con ssh:
+
+git clone git@github.com:tsuloid/hello-world.git
+
+Si anteriormente utilizabas
+
+ https://github.com/tsuloid/hello-world.git
+
+Puedes simplemente cambiarlo:
+ 
+git remote set-url origin git@github.com:tsuloid/hello-world.git
+
+luego hacemos un pull para confirmar que sí queremos esta llave:
+
+git pull 
+
+Nos pregunta si queremos realmente utilizar el host a lo que escribimos:
+
+yes
+
+Y ya estás trabajando con este repositorio con un cifrado seguro.
+
+Como buena práctica antes de cualquier commit luego de hacer esto, hacemos lo siguiente:
+
+git pull origin master
+
+
+Y finalmente estás utilizando git con ssh y no necesitas usar contraseña ni usuario al usar git push, por ejemplo.
+
+No compartas tu llave privada. ;)
+
+
