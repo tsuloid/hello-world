@@ -1,0 +1,51 @@
+Usar el protocolo SSH con Git es importante cuando trabajamos con repositorios remotos.
+
+Siempre que sea posible debemos trabajar con SSH, la razón es que no cifrar nuestras credenciales puede ser perjudicial para la seguridad.
+
+(Nunca compartas tu llave privada)
+
+De esta manera podemos cifrar todas nuestras credenciales y proteger nuestro trabajo.
+
+Si hemos trabajado con repositorios remotos(En este caso GitHub) tendremos nuestro email, para cambiarlo podemos usar:
+
+git config --global user.email "your@mail.org"
+
+Y luego en el /home de tu terminal haces esto:
+
+ssh-keygen -t rsa -b 4096 -C "your@gmail.org"
+
+(No compartas tu llave privada para nada)
+
+Con ssh-keygen generamos nuestra llave ssh
+Con el parámetro -t indicamos que debe ser con RSA
+Con el parámetro -b indicamos qué complejidad de la llave 4096 en este caso
+Con el parámetro -C indicamos qué correo utilizamos
+
+Nos realizará un par de preguntas:
+1- ¿Dónde guardar la llave? Por defecto lo hará en home, no necesitamos moverla. 
+2- ¿Añadir un Passphrase? Lo correcto es que sí, pero puede ser sin clave.
+3- No compartas tu llave privada.
+
+Y nos dará nuestra llave privada y nuestra llave pública:
+id_rsa		privada
+id_rsa.pub	pública
+
+(Nunca debes compartir tu llave privada.)
+
+Chequeamos que nuestro agente ssh esté funcionanddo:
+
+eval $(ssh-agent -s)
+
+Y si todo está bien, nos muestra el id del proceso(pid).
+
+Procedemos a agregar nuestra llave ssh a nuestro sistema debemos utilizar el siguiente comando:
+
+ssh-add /ruta/al/ssh/id_rsa
+
+
+Y ya has agregado tu llave privada a tu agente ssh.
+
+Recuerda no compartir tu llave privada.
+
+
+
