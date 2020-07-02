@@ -73,3 +73,7 @@ git pull        - - fusiona una rama de un repositorio remoto con una rama de un
 
 
 
+git log	      	          	- - muestra un log con los cambios recientes
+        --all	        	- - muestra todos los cambios
+        --graph 	        - - manera más visual e ver los cambios
+        --decorate --oneline    - - manera minimalista de mostrar los cambios
