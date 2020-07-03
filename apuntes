@@ -101,3 +101,6 @@ Pero esto sólo lo borra de manera local, así que para borrarlo en nuestro repo
 git push origin :refs/tags/tutag
 
 
+git show-ref --tags 	- - Nos va a mostrar qué hash están asociados a qué tags.
+
+
