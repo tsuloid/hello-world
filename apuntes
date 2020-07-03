@@ -77,3 +77,27 @@ git log	      	          	- - muestra un log con los cambios recientes
         --all	        	- - muestra todos los cambios
         --graph 	        - - manera más visual e ver los cambios
         --decorate --oneline    - - manera minimalista de mostrar los cambios
+
+
+Tags: Ver tags es importante para identificar ciertos puntos durante el dasarrollo de nuestro proyecto.
+
+Para hacer un tag usamos el hash de nuestro commit al que queremos hacer el tag y usamos el siguiente comando:
+
+git tag -a <nombre> -m "mensaje" <hash>
+
+Los tags no son cambios directamente, pero para mandarlos a algún repositorio remoto podemos hacer lo siguiente:
+
+git pull origin master		- - como buena práctica y actualizar el repositorio local
+
+git push origin --tags 		- - para enviar los tags que añadimos.
+
+
+Para borrar cualquier tag podemos hacer lo siguiente:
+
+git tag -d <nombredetag>
+
+Pero esto sólo lo borra de manera local, así que para borrarlo en nuestro repositorio hacemos lo siguiente:
+
+git push origin :refs/tags/tutag
+
+
