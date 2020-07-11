@@ -1,12 +1,7 @@
-This is (not) my first repo. 
-I created the 'hello-world' repository 2 years ago but now i'm practicing.
-So, enjoy seeing a few notes wrote in spanish about git.
+This is the first repository that i'm working on.
+I'll translate this to spanish when this get finished.
+I hope this will help someone understanding how git works.
 
-They are crearly in spanish maybe i'll translate it later.
-
-this is me again trying to check what merge and fetch do.
-one dot.
-
-@tsuloid on telegram btw.
-
-
+Telegram: @tsuloid
+OS: Void Linux
+PC: Compaq C700
